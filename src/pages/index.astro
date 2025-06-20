@@ -1,16 +1,17 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import OndasEspectro from '../components/OndasEspectro.jsx';
+import SobreMi from '../components/SobreMi.jsx';
+import Tecnologias from '../components/Tecnologias.jsx';
+import Proyectos from '../components/Proyectos.jsx';
 
 ---
+<BaseLayout>
+	<main class="min-h-screen flex flex-col items-center bg-[#200056] pt-20 pb-12">
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+    <OndasEspectro client:load />
+	<SobreMi client:load />
+  <Tecnologias client:load />
+  <Proyectos client:load />
+  </main>
+</BaseLayout>
