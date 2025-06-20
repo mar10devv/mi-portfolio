@@ -12,7 +12,7 @@ export default function OndasEspectro() {
     const ctx = canvas.getContext("2d");
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2;
-    const baseRadius = 100;
+    const baseRadius = canvas.width / 3;
     const lines = 128;
     const amplitudes = Array.from({ length: lines }, () => Math.random() * 20 + 10);
 
@@ -62,24 +62,34 @@ export default function OndasEspectro() {
     <div className="flex flex-col items-center justify-center space-y-8">
       {/* Foto y espectro */}
       <div
-        className="relative w-[350px] h-[350px] flex items-center justify-center"
+        className="
+          relative
+          w-48 h-48
+          sm:w-[350px] sm:h-[350px]
+          flex items-center justify-center
+        "
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
         <canvas
           ref={canvasRef}
-          width={350}
-          height={350}
-          className="absolute z-0"
+          width={192}
+          height={192}
+          className="absolute z-0 sm:w-[350px] sm:h-[350px] w-48 h-48"
         />
         <img
           src="/creator.jpg"
           alt="Foto"
-          className="absolute w-48 h-48 rounded-full z-10 object-cover shadow-xl cursor-pointer"
+          className="
+            absolute
+            w-24 h-24
+            sm:w-48 sm:h-48
+            rounded-full z-10 object-cover shadow-xl cursor-pointer
+          "
         />
       </div>
 
-      {/* Navbar: iconos centrados debajo de la foto */}
+      {/* Iconos de redes sociales SIEMPRE visibles */}
       <Navbar />
 
       {/* Badge animado */}

@@ -14,7 +14,7 @@ export default function AnimatedBadgeText({
   }, [badges.length, interval]);
 
   return (
-    <div className="flex gap-3 items-center text-5xl font-bold">
+    <div className="flex gap-3 items-center text-xl sm:text-2xl md:text-4xl font-bold">
       <span className="text-gray-200">{fixedText}</span>
       <span style={{ minWidth: "10ch" }}>
         <AnimatePresence mode="wait">
