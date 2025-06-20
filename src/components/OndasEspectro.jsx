@@ -78,15 +78,17 @@ export default function OndasEspectro() {
           className="absolute z-0 sm:w-[350px] sm:h-[350px] w-48 h-48"
         />
         <img
-          src="/creator.jpg"
-          alt="Foto"
-          className="
-            absolute
-            w-24 h-24
-            sm:w-48 sm:h-48
-            rounded-full z-10 object-cover shadow-xl cursor-pointer
-          "
-        />
+  src="/creator.jpg"
+  alt="Foto"
+  className="
+    absolute
+    w-40 h-40
+    sm:w-48 sm:h-48
+    rounded-full z-10 object-cover shadow-xl cursor-pointer
+  "
+/>
+
+
       </div>
 
       {/* Iconos de redes sociales SIEMPRE visibles */}
